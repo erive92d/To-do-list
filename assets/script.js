@@ -1,5 +1,11 @@
-var timeDay = document.getElementById('time-date')
-
+//SHOW TIME
 setInterval(function(){
-    timeDay.textContent = Date()
+    $('#time-date').text(Date())
 },1000)
+
+$('.modal-header').text('Create Todo')
+
+$( '#date' ).datepicker();
+
+
+

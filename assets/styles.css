@@ -31,4 +31,11 @@ th {
     width: 400px;
     padding: 2%;
 }
+#static-backdrop {
+    border: 3px solid red;
+}
 
+.todo-form {
+    display:block;
+    padding: 2% 0;
+}
