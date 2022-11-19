@@ -51,8 +51,19 @@
       <div class="modal-body">
         <label for="todo-name" class="todo-form">Project Name: </label>
         <input type="text" id="todo-name" class="todo-control">
+        
         <label for="date" class="todo-form">Due date:</label>
         <input type="text" name="date" id="date">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Project Type
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Javascript</a></li>
+            <li><a class="dropdown-item" href="#">Jquery</a></li>
+            <li><a class="dropdown-item" href="#">Bootstrap</a></li>
+          </ul>
+        </div>
         
       </div>
       <div class="modal-footer">
@@ -73,11 +84,29 @@
             <th scope="col">Due</th>
           </tr>
           <tr>
-           
-           
-
-
-
+            <td id="proj-name"></td>
+            <td id="proj-type"></td>
+            <td id="proj-due"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
         </thead>
         <tbody>
