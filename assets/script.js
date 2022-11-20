@@ -13,15 +13,12 @@ var test = document.createElement('table')
 var table = document.createElement('tr')
 var todo = document.getElementById('todo-name')
 var date = document.getElementById('date')
-var projectType = document.querySelectorAll('.dropdown-items')
+var projectType = document.querySelectorAll('.dropdown-item')
 var tBody = document.getElementsByTagName('tr')
 var test5 = document.getElementById('test5')
+var selectedType;
 
-
-
-
-
-
+// alert(projectType.value)
 
 
 
@@ -33,27 +30,27 @@ $('#submit').click(function(){
     var projDue = document.createElement('td')
     var projType = document.createElement('td')
     newProj.textContent = todo.value;
-    for(var i = 0; i < projectType.length; i++) {
-    
-        projectType[i].addEventListener('click',function() {
-            var selectedType;
-            if(projectType[i] === true) {
-                selectedType = projectType[i]
-            }
-        })
-        console.log(selectedType)
-    
-    }
-    
     projDue.textContent = date.value
+    var result
+
+    for(var i = 0; i < projectType.length; i++) {
+        projectType[i].addEventListener('click', function() {
+             alert(this.textContent)
+        })
+        }
+  
+
+    
     // newProj.textContent = todo.value;
+
+    
     $('#proj-name').append(newProj)
     $('#proj-due').append(projDue)
-    $('#proj-type').append(projType)
+    $('#proj-type').append(result)
+    // console.log(selectedType)
 
     
 })
-
 
 
 
