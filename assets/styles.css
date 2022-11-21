@@ -1,3 +1,6 @@
+body {
+    font-family: 'Patrick Hand',sans-serif;
+}
 
 nav {
     display: flex;
@@ -5,7 +8,8 @@ nav {
     justify-content: center;
     height: 150px;
     border-bottom: 3px solid black;
-    background-color: bisque;
+    background-color: #144375;
+    color: white;
 }
 #time-date {
     font-size: 150%;
