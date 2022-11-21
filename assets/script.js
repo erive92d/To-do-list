@@ -37,8 +37,8 @@ function addItems(e) {
     tbodyEl.innerHTML += `
         <tr>
             <td>${projectName}</td>
-            <td>${projectDue}</td>
             <td>${selectedType}</td>
+            <td>${projectDue}</td>
 
             <td><button class="deleteBtn">x</button></td>
         </tr>
