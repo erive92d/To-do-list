@@ -1,9 +1,14 @@
 body {
     font-family: 'Patrick Hand',sans-serif;
+    padding: 0;
+    margin: 0;
+    
+    
 }
 
 nav {
     display: flex;
+    
     align-items: center;
     justify-content: center;
     height: 150px;
@@ -11,22 +16,30 @@ nav {
     background-color: #144375;
     color: white;
 }
+
+
 #time-date {
-    font-size: 150%;
+    font-size: 200%;
     font-weight: 700;
 }
 
 
 .row {
-    width: 50%;
+    width: 40%;
     display: inline-block;
-    flex-direction: column;
-    padding: 2%;
+    padding: 1%;
+    margin-left: 6%;
     
 }
 .table {
-    width: 50%;
     display: inline-block;
+    width: 40%;
+ 
+  
+}
+
+.table th {
+    font-size: 150%;
 }
 .form-control {
     width: 400px;
@@ -50,4 +63,20 @@ th {
     
 
 }
+#instruction {
+    font-weight: 500;
+}
+.col-md-6 {
+    margin: 0;
+}
+.info {
+    margin: 0;
+    font-size: 110%;
+}
+.col-md-6 li {
+    font-weight: 600;
+    font-style:italic;
+    
+}
+
 
