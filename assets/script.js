@@ -33,12 +33,17 @@ function addItems(e) {
     var tbodyEl = document.querySelector('tbody')
     var projectName = document.getElementById('todo-name').value
     var projectDue = document.getElementById('date').value
+    
+    localStorage.setItem('projectName', projectName)
+    localStorage.setItem('projectDue', projectDue)
+    localStorage.setItem('projectType', selectedType)
+    
 
     tbodyEl.innerHTML += `
         <tr>
-            <td>${projectName}</td>
-            <td>${selectedType}</td>
-            <td>${projectDue}</td>
+            <td>${localStorage.getItem('projectName')}</td>
+            <td>${localStorage.getItem('projectType')}</td>
+            <td>${localStorage.getItem('projectDue')}</td>
 
             <td><button class="deleteBtn">x</button></td>
         </tr>
