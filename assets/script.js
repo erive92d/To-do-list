@@ -18,6 +18,9 @@ var tBody = document.getElementsByTagName('tr')
 var test5 = document.getElementById('test5')
 var tableEl = document.querySelector('table')
 var selectedType;
+var projectNameRet
+var projectTypeRet
+var projectDueRet
 
 
 for (var i = 0;i < projectType.length;i++) { 
@@ -33,24 +36,40 @@ function addItems(e) {
     var tbodyEl = document.querySelector('tbody')
     var projectName = document.getElementById('todo-name').value
     var projectDue = document.getElementById('date').value
+
+
     
-    localStorage.setItem('projectName', projectName)
-    localStorage.setItem('projectDue', projectDue)
-    localStorage.setItem('projectType', selectedType)
     
+    localStorage.setItem('projectName', JSON.stringify(projectName))
+    localStorage.setItem('projectDue', JSON.stringify(projectDue))
+    localStorage.setItem('projectType', JSON.stringify(selectedType))
+    
+    projectNameRet = localStorage.getItem('projectName')
+    projectTypeRet = localStorage.getItem('projectType')
+    projectDueRet = localStorage.getItem('projectDue')
+
 
     tbodyEl.innerHTML += `
         <tr>
-            <td>${localStorage.getItem('projectName')}</td>
-            <td>${localStorage.getItem('projectType')}</td>
-            <td>${localStorage.getItem('projectDue')}</td>
+            <td>${JSON.parse(projectNameRet)}</td>
+            <td>${JSON.parse(projectTypeRet)}</td>
+            <td>${JSON.parse(projectDueRet)}</td>
 
             <td><button class="deleteBtn">x</button></td>
         </tr>
+    `  
+
     
-    
-    `
 }
+
+console.log(projectNameRet)
+
+
+
+
+
+
+
 
 function deleteRow(e) {
     if(!e.target.classList.contains('deleteBtn')) {
@@ -60,6 +79,9 @@ function deleteRow(e) {
     var btn = e.target;
     btn.closest('tr').remove();
 }
+
+
+
 
 
 submitEl.addEventListener('submit', addItems)
